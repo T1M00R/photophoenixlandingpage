@@ -23,104 +23,72 @@ export default function Home() {
       <Box 
         w="full" 
         bgGradient="linear(to-b, blue.900, gray.900)"
-        pt={{ base: 24, md: 32 }}
-        pb={{ base: 16, md: 24 }}
+        pt={{ base: 12, md: 16 }}
+        pb={{ base: 12, md: 16 }}
         position="relative"
         overflow="hidden"
       >
-        {/* Background Grid Effect */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bgImage="url('/grid.png')"
-          opacity="0.1"
-        />
-
         <Container maxW={{ base: '95%', xl: '1440px' }}>
-          <VStack spacing={8} alignItems="center" textAlign="center">
-            <Image
-              className="floating"
-              src="/photophoenix.png"
-              alt="PhotoPhoenix Logo"
-              width={200}
-              height={200}
-              style={{ 
-                filter: 'drop-shadow(0px 0px 20px rgba(66, 153, 225, 0.5))',
-                margin: '1rem 0'
-              }}
-            />
-            <Heading
-              as="h1"
-              fontSize={{ base: '4xl', md: '6xl' }}
-              bgGradient="linear(to-r, blue.400, purple.500)"
-              backgroundClip="text"
-              fontWeight="extrabold"
-              letterSpacing="tight"
-            >
-              PhotoPhoenix
-            </Heading>
-            <Heading 
-              size={{ base: 'xl', md: '2xl' }} 
-              maxW="800px"
-              lineHeight="1.2"
-              mt={4}
-              color="gray.100"
-            >
-              Automate Your Social Media Image Creation
-            </Heading>
-            <Text 
-              fontSize={{ base: 'lg', md: 'xl' }} 
-              color="gray.400" 
-              maxW="800px"
-              px={4}
-            >
-              Create unique variations of your images in seconds. Our AI-powered platform helps 
-              you avoid duplicate content penalties while maintaining brand consistency across 
-              all social media platforms.
-            </Text>
-            <Stack 
-              direction={{ base: 'column', sm: 'row' }} 
-              spacing={4} 
-              mt={8}
-            >
-              <Button
-                size="lg"
-                bgGradient="linear(to-r, blue.500, purple.500)"
-                color="white"
-                height="4rem"
-                px="2rem"
-                fontSize="1.2rem"
-                _hover={{
-                  bgGradient: "linear(to-r, blue.600, purple.600)",
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 0 20px rgba(66, 153, 225, 0.6)',
+          <Stack direction={{ base: 'column', lg: 'row' }} spacing={8} align="center">
+            {/* Left side - Image */}
+            <Box flex={1} textAlign="center">
+              <Image
+                className="floating"
+                src="/photophoenix.png"
+                alt="PhotoPhoenix Logo"
+                width={500}
+                height={500}
+                style={{ 
+                  filter: 'drop-shadow(0px 0px 20px rgba(66, 153, 225, 0.5))',
+                  display: 'inline-block'
                 }}
-                transition="all 0.2s"
+              />
+            </Box>
+            
+            {/* Right side - Content */}
+            <VStack flex={1} spacing={6} align="start">
+              <Heading
+                fontSize={{ base: '4xl', md: '6xl' }}
+                bgGradient="linear(to-r, blue.400, purple.500)"
+                backgroundClip="text"
+                fontWeight="extrabold"
               >
-                Try For Free
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                borderColor="blue.400"
-                color="blue.400"
-                height="4rem"
-                px="2rem"
-                fontSize="1.2rem"
-                _hover={{
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 0 20px rgba(66, 153, 225, 0.3)',
-                  bg: 'rgba(66, 153, 225, 0.1)',
-                }}
-                transition="all 0.2s"
-              >
-                Watch Demo
-              </Button>
-            </Stack>
-          </VStack>
+                PhotoPhoenix
+              </Heading>
+              <Heading size="xl" color="gray.100">
+                Automate Your Social Media Image Creation
+              </Heading>
+              <Text fontSize="lg" color="gray.400">
+                Create unique variations of your images in seconds with our AI-powered platform.
+              </Text>
+              <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
+                <Button
+                  size="lg"
+                  bgGradient="linear(to-r, blue.500, purple.500)"
+                  color="white"
+                  height="4rem"
+                  px="2rem"
+                  fontSize="1.2rem"
+                  _hover={{
+                    bgGradient: "linear(to-r, blue.600, purple.600)",
+                  }}
+                >
+                  Try For Free
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  borderColor="blue.400"
+                  color="blue.400"
+                  height="4rem"
+                  px="2rem"
+                  fontSize="1.2rem"
+                >
+                  Watch Demo
+                </Button>
+              </Stack>
+            </VStack>
+          </Stack>
         </Container>
       </Box>
 
