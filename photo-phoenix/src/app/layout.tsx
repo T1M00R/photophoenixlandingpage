@@ -15,8 +15,17 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "PhotoPhoenix - Bulk Social Media Image Editor",
+  title: "PhotoPhoenix - AI-Powered Social Media Image Editor",
   description: "Transform your social media content with AI-powered bulk image editing",
+  icons: {
+    icon: '/photophoenix.png',
+    apple: '/photophoenix.png',
+  },
+  openGraph: {
+    title: 'PhotoPhoenix - AI-Powered Social Media Image Editor',
+    description: 'Transform your social media content with AI-powered bulk image editing',
+    images: ['/photophoenix.png'],
+  },
 };
 
 export default function RootLayout({
