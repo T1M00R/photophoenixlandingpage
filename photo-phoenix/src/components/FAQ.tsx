@@ -12,24 +12,28 @@ import { FaChevronDown } from 'react-icons/fa';
 
 const faqData = [
   {
-    question: "What's included in the free trial?",
-    answer: "Our 7-day free trial includes access to all Pro features, allowing you to test the full capabilities of PhotoPhoenix before making a decision."
+    question: "What image formats do you support?",
+    answer: "We support all major formats including JPG, PNG, WEBP, AVIF, and GIF. You can convert between any formats while maintaining quality."
   },
   {
-    question: "Can I switch plans later?",
-    answer: "Yes! You can upgrade or downgrade your plan at any time. The price difference will be prorated for your billing cycle."
+    question: "How does bulk processing work?",
+    answer: "Simply upload multiple images at once, select your desired modifications (resize, format, compression, etc.), and process them all with one click. Download individually or as a zip file."
+  },
+  {
+    question: "What's the maximum file size and batch limit?",
+    answer: "Free plan supports up to 5MB per image and 100 images per month. Pro plan increases this to 25MB per image and unlimited monthly processing."
+  },
+  {
+    question: "How do you ensure images pass platform checks?",
+    answer: "Our optimization algorithms are specifically designed to maintain image quality while staying within platform guidelines. We regularly update our processing to match platform requirements."
+  },
+  {
+    question: "Can I save my processing settings?",
+    answer: "Pro users can create and save custom presets for different platforms or use cases, making batch processing even faster."
   },
   {
     question: "Do you offer refunds?",
-    answer: "We offer a 30-day money-back guarantee. If you're not satisfied with PhotoPhoenix, we'll refund your payment with no questions asked."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, and cryptocurrency payments through Stripe."
-  },
-  {
-    question: "Is there a limit to how many images I can process?",
-    answer: "The Lite plan includes up to 1000 AI variations per month. The Pro plan has no limits on processing."
+    answer: "Yes, we offer a 30-day money-back guarantee if you're not satisfied with our service."
   }
 ];
 

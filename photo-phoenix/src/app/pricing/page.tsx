@@ -15,6 +15,7 @@ import {
   ListIcon,
 } from '@chakra-ui/react';
 import { FaCheck, FaTimes } from 'react-icons/fa';
+import FAQ from '@/components/FAQ';
 
 const plans = [
   {
@@ -22,11 +23,11 @@ const plans = [
     price: '0',
     description: 'For personal use',
     features: [
-      { text: '10 AI variations/month', included: true },
-      { text: 'Basic editing tools', included: true },
+      { text: '100 images/month', included: true },
+      { text: 'Basic image optimization', included: true },
       { text: 'Standard quality exports', included: true },
       { text: 'Community support', included: true },
-      { text: 'Advanced AI models', included: false },
+      { text: 'Batch processing', included: false },
       { text: 'Priority support', included: false },
       { text: 'API access', included: false },
     ],
@@ -37,11 +38,11 @@ const plans = [
     popular: true,
     description: 'For professionals',
     features: [
-      { text: 'Unlimited AI variations', included: true },
-      { text: 'Advanced editing suite', included: true },
+      { text: 'Unlimited images', included: true },
+      { text: 'Advanced optimization suite', included: true },
       { text: 'High quality exports', included: true },
       { text: 'Priority support', included: true },
-      { text: 'Advanced AI models', included: true },
+      { text: 'Bulk processing', included: true },
       { text: 'Custom presets', included: true },
       { text: 'API access', included: true },
     ],
@@ -62,7 +63,7 @@ export default function Pricing() {
               Simple Pricing
             </Heading>
             <Text fontSize="xl" color="gray.400">
-              Start for free, upgrade when you need to
+              Start for free, upgrade when you need more
             </Text>
           </VStack>
 
@@ -138,6 +139,17 @@ export default function Pricing() {
               </Box>
             ))}
           </SimpleGrid>
+
+          <VStack spacing={8} w="full" maxW="4xl" mx="auto">
+            <Heading
+              fontSize={{ base: '3xl', md: '4xl' }}
+              bgGradient="linear(to-r, blue.400, purple.500)"
+              backgroundClip="text"
+            >
+              Frequently Asked Questions
+            </Heading>
+            <FAQ />
+          </VStack>
         </VStack>
       </Container>
     </Box>
